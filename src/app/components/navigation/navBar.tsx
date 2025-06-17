@@ -92,7 +92,8 @@ export default function NavBar() {
 function Dropdown({ label, items }: { label: string; items: { href: string; label: string }[] }) {
   return (
     <Menu as="div" className="relative inline-block text-left bg-wander-white">
-      <Menu.Button className="inline-flex items-center hover:text-black">
+      <Menu.Button className="inline-flex items-center hover:text-black focus:outline-none focus:ring-0 focus:border-none">
+
         {label}
         <ChevronDown size={16} />
       </Menu.Button>
