@@ -67,8 +67,8 @@ export default function Contact() {
               <>
                 <div className="w-full  flex items-center justify-center  bg-wander-white">
     <div className="max-w-xl text-center items-center space-y-6 wander-black-text px-8 pt-[1vw]">
-      <div className="bg-white rounded-xl p-6 max-w-md w-full relative shadow-xl">
-        <h2 className="text-xl font-bold mb-4 wander-brown-text">Send us a message</h2>
+      <div className="bg-white rounded-xl p-6 max-w-md w-full relative shadow-md">
+        <h2 className="text-xl font-bold mb-4 wander-brown-text">Send Us A Message</h2>
         {sent ? (
           <p className="roaming-green-text font-semibold wander-brown-text">Thanks for your message!</p>
         ) : (
@@ -85,7 +85,7 @@ export default function Contact() {
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-8">
   <h1 className="wander-brown-text text-xl font-semibold text-center md:text-right whitespace-nowrap">
-    Connect With Us.
+    Connect With Us
   </h1>
   <div className="flex justify-center items-center space-x-4">
     <Link href="https://www.instagram.com/roamingintheknow/" target="_blank" rel="noopener noreferrer">

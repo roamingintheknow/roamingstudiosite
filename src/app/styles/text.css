@@ -159,10 +159,25 @@
   .hide-766 {
     display: none;
   }
+  .about-h1 {
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    font-size: 10vw;
+    padding: 2vh 4vw;
+  }
+  .about-h2 {
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    font-size: 9vw;
+    padding: 2vh 4vw;
+  }
   .offer-p {
     font-weight: 500;
     line-height: 1.4;
     text-align: center;
+    font-size: 6vw;
     padding: 0 4vw;
   }
 }
@@ -179,6 +194,20 @@
   }
 .hide-766 {
     display: none;
+  }
+  .about-h1 {
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    font-size: 10vw;
+    padding: 2vh 4vw;
+  }
+  .about-h2 {
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    font-size: 9vw;
+    padding: 2vh 4vw;
   }
   .offer-p {
     font-weight: 500;
@@ -212,7 +241,20 @@
     text-align: center;
     padding: 0 14vw;
   }
-  
+  .about-h1 {
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    font-size: 10vw;
+    padding: 2vh 4vw;
+  }
+  .about-h2 {
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    font-size: 6vw;
+    padding: 2vh 4vw;
+  }
 }
 
 /* Tablet M–L: 767–1023px */

@@ -40,7 +40,7 @@ function SimpleContactForm() {
 
   return (
     <div className="bg-white rounded-xl p-6 shadow-lg max-w-md w-full mx-auto mb-6">
-      <h2 className="text-xl font-bold mb-4 bc-green-text text-center">Send us a message</h2>
+      <h2 className="text-xl font-bold mb-4 bc-green-text text-center">Send Us A Message</h2>
 
       {sent ? (
         <p className="text-green-600 font-semibold text-center">Thanks for your message!</p>
