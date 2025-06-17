@@ -56,7 +56,13 @@ export default function Contact() {
       setSending(false);
     }
   };
-  
+  const [copied, setCopied] = useState("");
+
+  const handleCopy = (text: string) => {
+    navigator.clipboard.writeText(text);
+    setCopied(text);
+    setTimeout(() => setCopied(""), 1500);
+  };
   return (
     <>
       <NavBar/>
@@ -65,9 +71,11 @@ export default function Contact() {
             word="CONTACT US"
             textBlock={
               <>
-                <div className="w-full  flex items-center justify-center  bg-wander-white">
-    <div className="max-w-xl text-center items-center space-y-6 wander-black-text px-8 pt-[1vw]">
-      <div className="bg-white rounded-xl p-6 max-w-md w-full relative shadow-md">
+
+<div className="w-full flex items-center justify-center bg-wander-white">
+  <div className="text-center wander-black-text px-4 pt-[1vw] min-w-[35vw] max-w-[90vw]">
+    <div className="bg-white rounded-xl p-6 w-full shadow-md">
+        
         <h2 className="text-xl font-bold mb-4 wander-brown-text">Send Us A Message</h2>
         {sent ? (
           <p className="roaming-green-text font-semibold wander-brown-text">Thanks for your message!</p>
@@ -93,6 +101,33 @@ export default function Contact() {
     </Link>
   </div>
 </div>
+
+
+<div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-8">
+  Prefer to connect directly? We can also be reached here:
+</div>
+<div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-8">
+
+<ul className="space-y-2">
+    {["roamingintheknow@gmail.com", "+1 604 966 1828"].map((text) => (
+      <li key={text} className="relative">
+        <p
+          onClick={() => handleCopy(text)}
+          className="wander-black-text leading-relaxed cursor-pointer hover:underline inline-block"
+        >
+          {text}
+        </p>
+        {copied === text && (
+          <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-bc-green wander-black-text text-xs px-2 py-1 rounded shadow z-10">
+            Copied!
+          </div>
+        )}
+      </li>
+    ))}
+  </ul>
+  </div>
+
+
     </div>
   </div>
               </>

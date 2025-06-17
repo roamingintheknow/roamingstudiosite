@@ -7,12 +7,19 @@
   .flex-container {
     padding: 12px 16px 8vh;
   }
+  .three-tile-block{
+
+  }
 }
 
 /* Medium screens - md (768px to 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .flex-container {
     padding: 6vh 5vw;
+  }
+  .three-tile-block{
+    padding-left: 4vw;
+    padding-right: 4vw;
   }
 }
 
@@ -21,11 +28,19 @@
   .flex-container {
     padding: 24px 32px 5vh;
   }
+  .three-tile-block{
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
 }
 
 /* Extra large screens - xl (1280px and up) */
 @media (min-width: 1280px) {
   .flex-container {
     padding: 32px 40px;
+  }
+  .three-tile-block{
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
 }

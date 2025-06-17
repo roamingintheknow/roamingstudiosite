@@ -80,7 +80,7 @@ export default function About() {
 
 <div className="w-full px-6 pb-10 md:pb-0 md:pt-10">
 
-  <div className="flex flex-col-reverse md:flex-col items-center text-center wander-black-text about-p-lg">
+  <div className="flex flex-col-reverse md:flex-col three-tile-block items-center text-center wander-black-text about-p-lg  ">
 
     {/* Text */}
     <p className="italic max-w-4xl mx-auto px-6 md:px-48  ">
