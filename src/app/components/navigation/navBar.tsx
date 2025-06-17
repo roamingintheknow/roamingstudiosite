@@ -46,11 +46,16 @@ export default function NavBar() {
               <Link href="/about" className="hover:text-black">ABOUT US</Link>
               <Link href="/services" className="hover:text-black">SERVICES</Link>
              
-              <Dropdown label="PORTFOLIO" items={[
+             <div   className='bg-wander-white'>
+              <Dropdown 
+              label="PORTFOLIO" 
+            
+              items={[
                 { href: '/portfolio/hotels', label: 'Hotels' },
                 { href: '/portfolio/tours', label: 'Tours & Experiences' },
                 { href: '/portfolio/travel', label: 'Travel' },
               ]} />
+              </div>
              <Link href="/contact">
   <button className="cursor-pointer bg-bc-green text-black text-sm px-3 py-1.5 rounded hover:bg-gray-800 transition">
     Contact

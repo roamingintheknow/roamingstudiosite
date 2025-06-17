@@ -35,7 +35,7 @@ export default function About() {
 
 </div>
 <section className="w-full   bg-white">
-  <div className="max-w-7xl ">
+  <div className="">
 
   <div className="grid md:grid-cols-1 gap-6 md:gap-10 px-6  py-20 ">
   <div className="flex items-center">
