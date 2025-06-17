@@ -91,8 +91,8 @@ export default function NavBar() {
 
 function Dropdown({ label, items }: { label: string; items: { href: string; label: string }[] }) {
   return (
-    <Menu as="div" className="relative inline-block text-left ">
-      <Menu.Button className="inline-flex items-center gap-1 hover:text-black">
+    <Menu as="div" className="relative inline-block text-left bg-wander-white">
+      <Menu.Button className="inline-flex items-center hover:text-black">
         {label}
         <ChevronDown size={16} />
       </Menu.Button>
@@ -103,14 +103,14 @@ function Dropdown({ label, items }: { label: string; items: { href: string; labe
         leave="transition ease-in duration-75"
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95">
-        <Menu.Items className="absolute z-50 mt-2 w-48 origin-top-left bg-white border rounded-md">
-          <div className="py-1">
+        <Menu.Items className="absolute z-50  w-48 origin-top-left bg-wander-white ">
+          <div >
             {items.map((item, i) => (
               <Menu.Item key={i}>
                 {({ active }) => (
                   <Link
                     href={item.href}
-                    className={`block px-4 py-2 text-sm ${active ? 'bg-gray-100 text-gray-900' : 'text-gray-700'}`}
+                    className={`block px-4 py-2 text-sm ${active ? 'bg-bc-green text-white' : 'text-gray-700'}`}
                   >
                     {item.label}
                   </Link>
