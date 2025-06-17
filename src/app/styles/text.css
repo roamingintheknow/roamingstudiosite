@@ -1,0 +1,274 @@
+/* === Utility Classes === */
+.no-wrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.centered {
+  text-align: center;
+}
+.header-base {
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-top: 10vh;
+}
+.header-xl {
+  font-size: 8em;
+}
+.text-responsive {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+}
+.text-responsive-lg {
+  font-size: clamp(1rem, 4.5vw, 4.5rem);
+}
+.text-responsive-md {
+  font-size: clamp(0.9rem, 4vw, 3rem);
+}
+.text-responsive-connect {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+}
+.portfolio-header-text-lg {
+  display: inline-block;
+  white-space: nowrap;
+  line-height: 1;
+  font-size: 8rem; /* preferred size */
+  max-width: 75vw;
+  overflow: hidden;
+  padding-top: 0.3em;
+}
+
+/* === Portfolio === */
+/* .portfolio-header-text-lg {
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-top: 10vh;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+} */
+.portfolio-header-text-xlg {
+  font-weight: 550;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-top: 10vh;
+  font-size: 8em;
+}
+.portfolio-header-text-m {
+  font-weight: 450;
+  line-height: 1.3;
+  text-align: center;
+  padding: 10vh 8vw;
+  font-size: 4vw;
+}
+
+
+/* === About === */
+.about-header-text-lg {
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-top: 10vh;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+}
+.about-header-text-xlg {
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-top: 10vh;
+  font-size: 8em;
+}
+.about-h1 {
+  /* font-weight: 500; */
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-top: 10vh;
+  font-size: clamp(1rem, 4.5vw, 4.5rem);
+}
+.about-h2 {
+  text-align: center;
+  font-size: clamp(0.9rem, 4vw, 3rem);
+  font-weight: 500;
+  padding-top: 10vh;
+}
+
+
+/* === Paragraphs === */
+.about-p,
+.about-p-lg,
+.offer-p,
+.collab-p {
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+}
+.about-p-lg {
+  line-height: 1.2;
+}
+
+/* === Collab === */
+.collab-h1 {
+  font-weight: 550;
+  font-size: 6vw;
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+}
+
+/* === Connect === */
+.connect-header {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  font-weight: 500;
+  text-align: left;
+}
+
+/* === Text Columns === */
+.text-column {
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+
+/* === Responsive Breakpoints === */
+
+/* Mobile XS: 0–449px */
+@media (max-width: 449px) {
+  .portfolio-header-text-m {
+    font-size: 4vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+  .about-p {
+    font-size: 2.8vw;
+  }
+  .hide-766 {
+    display: none;
+  }
+  .offer-p {
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    padding: 0 4vw;
+  }
+}
+
+/* Mobile S–M: 450–619px */
+@media (min-width: 450px) and (max-width: 619px) {
+  .about-p-lg {
+    font-size: 3.7vw;
+    padding: 6vh 4vw 0;
+  }
+  .about-p {
+    font-size: 2.4vw;
+    padding: 0 8vw;
+  }
+.hide-766 {
+    display: none;
+  }
+  .offer-p {
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    padding: 0 12vw;
+  }
+}
+
+/* Tablet S: 620–766px */
+@media (min-width: 620px) and (max-width: 766px) {
+  .portfolio-header-text-m {
+    font-size: 3vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+  .about-p-lg {
+    font-size: 2.7vw;
+    padding: 4vh 4vw 0;
+  }
+  .about-p {
+    font-size: 2.2vw;
+    padding: 0 12vw;
+  }
+  .hide-766 {
+    display: none;
+  }
+  .offer-p {
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    padding: 0 14vw;
+  }
+  
+}
+
+/* Tablet M–L: 767–1023px */
+@media (min-width: 767px) and (max-width: 1023px) {
+
+  .portfolio-header-text-m {
+    font-size: 1.8vw;
+    padding-top: 28vh;
+  }
+  .about-p-lg {
+    font-size: 1.9vw;
+    padding: 0 3vw;
+  }
+  .about-p {
+    font-size: 2.2vw;
+    padding: 0 14vw;
+  }
+  .offer-p {
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    padding: 0 5vw;
+  }
+}
+
+/* Desktop S: 1024–1449px */
+@media (min-width: 1024px) and (max-width: 1449px) {
+
+  
+ .portfolio-header-text-m {
+    font-size: 1.5vw;
+  }
+  .about-header-text-lg {
+    font-size: 3rem;
+  }
+  .about-p {
+    font-size: 1.5vw;
+    padding: 0 22vw;
+  }
+  .offer-p {
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    padding: 0 3vw;
+  }
+}
+
+/* Desktop L+: 1450px and up */
+@media (min-width: 1450px) {
+  .portfolio-header-text-m {
+    font-size: 1vw;
+  }
+  .offer-p {
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    padding: 0 3vw;
+  }
+}
