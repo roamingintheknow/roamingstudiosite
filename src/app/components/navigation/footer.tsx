@@ -143,8 +143,6 @@ export default function Footer() {
           <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
           <ul className="space-y-2">
             <li><a href="https://instagram.com/roamingintheknow" target="_blank" rel="noopener noreferrer" className="hover:text-white">Instagram</a></li>
-            <li><a href="https://www.youtube.com/@roamingintheknow" target="_blank" rel="noopener noreferrer" className="hover:text-white">YouTube</a></li>
-            <li><a href="https://www.tiktok.com/@roamingintheknow" target="_blank" rel="noopener noreferrer" className="hover:text-white">Tik Tok</a></li>
           </ul>
         </div>
       </div>
