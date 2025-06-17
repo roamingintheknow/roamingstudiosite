@@ -1,4 +1,4 @@
-import { Poppins,Playfair_Display } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import Head from 'next/head';
 import "./globals.css";
 import "./styles/colors.css";
@@ -6,12 +6,12 @@ import "./styles/text.css";
 import "./styles/effects.css";
 import "./styles/containers.css";
 
-const playfair = Playfair_Display({
-  variable: "--font-serif",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "700"],
-});
+// const playfair = Playfair_Display({
+//   variable: "--font-serif",
+//   subsets: ["latin"],
+//   display: "swap",
+//   weight: ["400", "700"],
+// });
 
 const poppins = Poppins({
   variable: '--font-poppins',
