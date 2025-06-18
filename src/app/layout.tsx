@@ -5,13 +5,7 @@ import "./styles/colors.css";
 import "./styles/text.css";
 import "./styles/effects.css";
 import "./styles/containers.css";
-
-// const playfair = Playfair_Display({
-//   variable: "--font-serif",
-//   subsets: ["latin"],
-//   display: "swap",
-//   weight: ["400", "700"],
-// });
+import GoogleAnalytics from './components/GoogleAnalytics';
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -76,15 +70,14 @@ export default function RootLayout({
   return (
     <html lang="en">
      <Head>
-     <link rel="icon" href="/favicon.ico" />
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-      </Head>
-    <body
-  className={`${poppins.variable} antialiased`}>
-        {children}
-      </body>
-    </html>
+     <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_ID!} />
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    </Head>
+    <body className={`${poppins.variable} antialiased`}>
+      {children}
+    </body>
+  </html>
   );
 }
