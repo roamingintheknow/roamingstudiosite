@@ -72,7 +72,7 @@ export default function Contact() {
             textBlock={
               <>
 
-<div className="w-full flex items-center justify-center bg-wander-white">
+<div className="w-full flex justify-center items-center responsive-top-padding bg-wander-white">
   <div className="text-center wander-black-text px-4 pt-[1vw] min-w-[35vw] max-w-[90vw]">
     <div className="bg-white rounded-xl p-6 w-full shadow-md">
         
