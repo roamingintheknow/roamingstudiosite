@@ -4,6 +4,11 @@ import Footer from "../components/navigation/footer";
 import Image from 'next/image';
 import { getCloudinaryUrl } from "../helpers/cloudinary";
 
+export const metadata = {
+  title: "About | Roaming Studio",
+  description: " We are a media company that creates story-driven content for tourism, hospitality, and destination brands in BC and beyond",
+};
+
 export default function About() {
 
   // const BackgroundImgUrl = getCloudinaryUrl('v1749761159/background%20images/about/CoupleShoot-2024-6_a4x1dp.jpg', true)
@@ -22,13 +27,13 @@ export default function About() {
       <p>
 
         
-        We’re Alia and Shawn - the wife/husband duo behind BC-based Roaming Studio. We are a media company that creates storytelling-driven content for tourism, hospitality, and destination brands in BC and beyond. 
+        We’re Alia and Shawn - the wife/husband duo behind BC-based Roaming Studio. We are a media company that creates story-driven content for tourism, hospitality, and destination brands in BC and beyond. 
         
 
 
       </p>
       <p>
-      After 3 years travelling to 50 countries and over a decade photographing for global publications and brands - we now bring together our two greatest passions: travel and photography.
+      After 3 years, travelling to 50 countries and over a decade photographing for global publications and brands - we now bring together our two greatest passions: travel and photography.
       </p>
     </>
   }

@@ -13,12 +13,21 @@ export default function Services() {
       word="OUR SERVICES"
       textBlock={
         <>
-          <p>
-          Roaming Studio specializes in storytelling-driven content for tourism, hospitality, and destination brands in BC and beyond.   
+
+<p>
+          Roaming Studio is a BC-Based media company that works with tourism, hospitality, and destination brands.
           </p>
           <p>
           We offer photography, UGC video, and drone content to give your story the visuals it deserves.
           </p>
+          <p>
+          Every project is custom, so reach out with your idea - we’ll find the best way to make it happen together.
+
+          </p>
+          {/* <p>
+          Roaming Studio specializes in story-driven content for tourism, hospitality, and destination brands in BC and beyond.   
+          </p> */}
+         
         </>
       }
       imageUrl={BackgroundImgUrl}

@@ -40,10 +40,10 @@ export default function Home() {
       textBlock={
         <>
           <p >
-          Roaming Studio specializes in storytelling-driven content for tourism, hospitality, and destination brands in BC and beyond.
+          Roaming Studio specializes in story-driven content for tourism, hospitality, and destination brands in BC and beyond.
             </p>
             <p >
-          After 3 years travelling to 50 countries and over a decade photographing for global publications and brands - we now bring together our two greatest passions: travel and photography.
+          After 3 years, travelling to 50 countries and over a decade photographing for global publications and brands - we now bring together our two greatest passions: travel and photography.
 
           </p>
         </>
