@@ -3,6 +3,10 @@ import PortfolioHeader from "../components/portfolio/portfolioHeader";
 import OfferBlock from "../components/about/offerBlock";
 import Footer from "../components/navigation/footer";
 import { getCloudinaryUrl } from "../helpers/cloudinary";
+export const metadata = {
+  title: "Services | Roaming Studio",
+  description: "We offer Phtography, UGC Video, and Drone Content services."
+};
 export default function Services() {
   const BackgroundImgUrl = getCloudinaryUrl('v1749761208/background%20images/services/PicoDoAreeiro--51_x3124h.jpg', true)
   const HorizontalBackgroundImgUrl = getCloudinaryUrl('v1749611581/Roaming%20Studio/Travel/PicoDoAreeiro--50_gmktlu.jpg', false)

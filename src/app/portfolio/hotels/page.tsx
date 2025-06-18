@@ -3,6 +3,11 @@ import PortfolioHeader from "../../components/portfolio/portfolioHeader";
 import { getCloudinaryUrl } from "../../helpers/cloudinary";
 import TwoColumnGrid from "../../components/imageLayouts/twoColumnGrid"
 import Footer from "../../components/navigation/footer";
+export const metadata = {
+  title: "Portfolio | Roaming Studio",
+  description: "A collection of photography work Roaming Studio has done for hotels in the past.",
+};
+
 export default function Hotels() {
  
   const imageUrl = getCloudinaryUrl('v1749585131/Roaming%20Studio/Hotels/DareLisbon-AY-Collaboration-7_vatsyy.jpg', true)

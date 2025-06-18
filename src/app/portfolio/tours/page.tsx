@@ -3,6 +3,10 @@ import PortfolioHeader from "../../components/portfolio/portfolioHeader";
 import TwoColumnGrid from "../../components/imageLayouts/twoColumnGrid";
 import { getCloudinaryUrl } from "../../helpers/cloudinary";
 import Footer from "../../components/navigation/footer";
+export const metadata = {
+  title: "Portfolio | Roaming Studio",
+  description: "A collection of photography work Roaming Studio has done for tours in the past.",
+};
 export default function Hotels() {
 
   const imageUrl = getCloudinaryUrl('v1749610036/Roaming%20Studio/Tours/DSC02312-2_kveipk.jpg', true)

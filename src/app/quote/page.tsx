@@ -4,7 +4,10 @@ import NavBar from "../components/navigation/navBar";
 import PortfolioHeader from "../components/portfolio/portfolioHeader";
 import Footer from "../components/navigation/footer";
 import { getCloudinaryUrl } from "@/app/helpers/cloudinary";
-
+export const metadata = {
+  title: "Quote | Roaming Studio",
+  description: "Request a quote for our Phtography, UGC Video, or Drone Content."
+};
 export default function Quotte() {
   const BackgroundImgUrl = getCloudinaryUrl('v1749761193/background%20images/contact/Wales-072122-125_gaiuvs.jpg', true)
   const HorizontalBackgroundImgUrl = getCloudinaryUrl('v1749877956/background%20images/services/Wales-072122-130-horizontal_ztfrmt.jpg', false)

@@ -4,6 +4,11 @@ import TwoColumnGrid from "../../components/imageLayouts/twoColumnGrid";
 import { getCloudinaryUrl } from "@/app/helpers/cloudinary";
 import Footer from "../../components/navigation/footer";
 
+export const metadata = {
+  title: "Portfolio | Roaming Studio",
+  description: "A collection of photography work Roaming Studio has done for travel brands in the past.",
+};
+
 export default function Travel() {
   const imageUrl = getCloudinaryUrl("v1749611595/Roaming%20Studio/Travel/IsleofSkye-082723--54_xukdab.jpg", true)
   const images = [

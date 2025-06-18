@@ -5,6 +5,12 @@ import PortfolioHeader from "../components/portfolio/portfolioHeader";
 import LetsCollab from "../components/home/letsCollab";
 import Footer from "../components/navigation/footer";
 import {getCloudinaryUrl} from "../helpers/cloudinary";
+
+export const metadata = {
+  title: "Roaming Studio",
+  description: "Roaming Studio specializes in story-driven content for tourism, hospitality, and destination brands in BC and beyond.",
+};
+
 export default function Home() {
 
   

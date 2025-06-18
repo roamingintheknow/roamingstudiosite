@@ -7,6 +7,11 @@ import PortfolioHeader from '../components/portfolio/portfolioHeader';
 import { BsInstagram } from "react-icons/bs";
 import { getCloudinaryUrl } from "../helpers/cloudinary";
 
+export const metadata = {
+  title: "Contact | Roaming Studio",
+  description: "Get in touch and we will find a way to work together!",
+};
+
 export default function Contact() {
 
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
