@@ -16,6 +16,9 @@ export default function Services() {
           <p>
           Roaming Studio specializes in storytelling-driven content for tourism, hospitality, and destination brands in BC and beyond.   
           </p>
+          <p>
+          We offer photography, UGC video, and drone content to give your story the visuals it deserves.
+          </p>
         </>
       }
       imageUrl={BackgroundImgUrl}

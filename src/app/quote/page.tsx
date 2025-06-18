@@ -93,10 +93,7 @@ export default function Quotte() {
     <div className="w-full bg-wander-white flex justify-center md:pt-18 z-10">
     <div className="pt-16 text-center wander-black-text px-4">
       <div className="bg-wander-green bg-opacity-50 flex justify-center items-center">
-        <div className="bg-white rounded-md p-6 shadow-md w-full min-w-[35vw] max-w-[90vw]">
-          {/* content here */}
-  
-            
+        <div className="bg-white rounded-md p-6 shadow-md w-full min-w-[35vw] max-w-[90vw]">            
             {sent ? (
               <p className="roaming-green-text font-semibold wander-brown-text">Thanks for your message!</p>
             ) : (

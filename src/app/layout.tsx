@@ -21,8 +21,8 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: 'Roaming Studio | BC Travel Photography & Video Production',
-  description: 'Roaming Studio helps British Columbia tourism boards and travel brands tell unforgettable stories through cinematic videos and stunning photography. Based in BC, available worldwide.',
+  title: 'Roaming Studio | Travel Focused BC-Based Media Company Offering Photography, UG Video, & Drone Travel Content',
+  description: 'Roaming Studio is a media company that creates storytelling-driven content for tourism, hospitality, and destination brands. Based in BC, available worldwide.',
   keywords: [
     'BC travel photographer',
     'BC videographer',

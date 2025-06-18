@@ -20,11 +20,15 @@ export default function About() {
   textBlock={
     <>
       <p>
-        We’re Alia and Shawn - the wife/husband duo behind BC-based Roaming Studio, where travel and photography come together to tell place-based stories that stick.
 
-  
+        
+        We’re Alia and Shawn - the wife/husband duo behind BC-based Roaming Studio. We are a media company that creates storytelling-driven content for tourism, hospitality, and destination brands in BC and beyond. 
+        
 
 
+      </p>
+      <p>
+      After 3 years travelling to 50 countries and over a decade photographing for global publications and brands - we now bring together our two greatest passions: travel and photography.
       </p>
     </>
   }
@@ -41,7 +45,9 @@ export default function About() {
   <div className="flex items-center">
     <div className="about-p wander-black-text">
       <p>
-        Drawing on our documentary and editorial roots, we bring a natural, atmospheric aesthetic to every project — telling visual stories that immerse viewers, spark curiosity, and inspire meaningful travel.
+        {/* Drawing on our documentary and editorial roots, we bring a natural, atmospheric aesthetic to every project — telling visual stories that immerse viewers, spark curiosity, and inspire meaningful travel. */}
+        Drawing on our documentary and editorial roots, we bring a natural, atmospheric aesthetic to every project — sharing travel in a way that’s authentic, inspiring, and useful.
+     
       </p>
     </div>
   </div>
