@@ -70,13 +70,14 @@ export default function RootLayout({
   return (
     <html lang="en">
      <Head>
-     <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_ID!} />
+    
       <link rel="icon" href="/favicon.ico" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     </Head>
     <body className={`${poppins.variable} antialiased`}>
       {children}
+      <GoogleAnalytics GA_MEASUREMENT_ID={process.env.GA_MEASUREMENT_ID!} />
     </body>
   </html>
   );
