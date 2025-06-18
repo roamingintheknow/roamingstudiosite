@@ -41,7 +41,7 @@ export const metadata = {
   openGraph: {
     title: 'Roaming Studio | BC Travel Photography & Video Production',
     description: 'Hire us to elevate your tourism brand with cinematic visuals. Based in Vancouver, we partner with BC tourism boards and travel brands to create unforgettable content.',
-    url: 'https://yourdomain.com',
+    url: 'https://res.cloudinary.com/dqiq7slio/image/upload/v1749761120/background%20images/main/Hiriketiya-verticalcut_mwrxbo.jpg',
     siteName: 'Roaming Studio',
     images: [
       {
