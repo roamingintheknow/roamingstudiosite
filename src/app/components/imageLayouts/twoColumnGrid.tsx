@@ -1,5 +1,15 @@
+'use client';
 import Image from 'next/image';
-import { getCloudinaryUrl } from '@/app/helpers/cloudinary';
+import { getCloudinaryUrlWithBaseSmall,cloudinaryLoader } from '@/app/helpers/cloudinary';
+import { useState, useEffect } from 'react';
+import { useMobile } from "@/app/helpers/hooks";
+
+type FetchedImage = {
+  id: string;
+  isVertical: boolean;
+  full: string;
+  blur: string;
+};
 
 type ImageItem = {
   id: string;
@@ -11,46 +21,64 @@ type TwoColumnGridProps = {
 };
 
 export default function TwoColumnGrid({ images }: TwoColumnGridProps) {
-  const leftColumn: ImageItem[] = [];
-  const rightColumn: ImageItem[] = [];
+ const [leftColumn, setLeftColumn] = useState<FetchedImage[]>([]);
+  const [rightColumn, setRightColumn] = useState<FetchedImage[]>([]);
+  const isMobile = useMobile();
+  useEffect(() => {
+    async function fetchImages() {
+      const left: FetchedImage[] = [];
+      const right: FetchedImage[] = [];
 
-  let leftHeight = 0;
-  let rightHeight = 0;
+      let leftHeight = 0;
+      let rightHeight = 0;
 
-  images.forEach((img) => {
-    const estimatedHeight = img.isVertical ? 3 : 2;
+      for (const img of images) {
+        const { full, blur } = await getCloudinaryUrlWithBaseSmall(img.id, img.isVertical);
+        const fetchedImg = { ...img, full, blur };
+        const estimatedHeight = img.isVertical ? 3 : 2;
 
-    if (leftHeight <= rightHeight) {
-      leftColumn.push(img);
-      leftHeight += estimatedHeight;
-    } else {
-      rightColumn.push(img);
-      rightHeight += estimatedHeight;
+        if (leftHeight <= rightHeight) {
+          left.push(fetchedImg);
+          leftHeight += estimatedHeight;
+        } else {
+          right.push(fetchedImg);
+          rightHeight += estimatedHeight;
+        }
+      }
+
+      setLeftColumn(left);
+      setRightColumn(right);
     }
-  });
+
+    fetchImages();
+  }, [images]);
 
   return (
     <div className="flex gap-6 px-6 py-6 bg-white max-w-5xl mx-auto">
       {[leftColumn, rightColumn].map((column, i) => (
         <div key={i} className="flex flex-col gap-6 w-1/2">
-          {column.map((img, j) => {
-            const { full, blur } = getCloudinaryUrl(img.id, img.isVertical);
-
-            return (
-              <Image
-                key={j}
-                src={full}
-                blurDataURL={blur}
-                alt={`Image ${j}`}
-                width={img.isVertical ? 750 : 750}
-                height={img.isVertical ? 1125 : 500}
-                className="object-cover w-full h-auto"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                placeholder="blur"
-                loading="lazy"
-              />
-            );
-          })}
+          {column.map((img, j) => (
+            <Image
+              key={img.id}
+              src={img.full}
+              blurDataURL={img.blur}
+              alt={`Image ${j}`}
+              width={isMobile ? 350 : 750}
+               height={isMobile 
+    ? Math.round((img.isVertical ? 8 : 10) / (img.isVertical ? 10 : 8) * 350) 
+    : Math.round((img.isVertical ? 8 : 10) / (img.isVertical ? 10 : 8) * 750)
+  }
+              className="object-cover w-full h-auto"
+           sizes="(max-width: 480px) 40vw, 
+           (max-width: 756px) 50vw, 
+         (max-width: 1024px) 50vw, 
+         (max-width: 1536px) 33vw, 
+         25vw"
+              placeholder="blur"
+              loading="lazy"
+              loader={cloudinaryLoader}
+            />
+          ))}
         </div>
       ))}
     </div>

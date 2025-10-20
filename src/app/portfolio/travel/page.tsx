@@ -1,16 +1,13 @@
 import NavBar from "../../components/navigation/navBar";
-import PortfolioHeader from "../../components/portfolio/portfolioHeader";
 import TwoColumnGrid from "../../components/imageLayouts/twoColumnGrid";
-import { getCloudinaryUrl } from "@/app/helpers/cloudinary";
 import Footer from "../../components/navigation/footer";
-
+import Hero from './hero';
 export const metadata = {
   title: "Portfolio | Roaming Studio",
   description: "A collection of photography work Roaming Studio has done for travel brands in the past.",
 };
 
 export default function Travel() {
-  const imageUrl = getCloudinaryUrl("v1749611595/Roaming%20Studio/Travel/IsleofSkye-082723--54_xukdab.jpg", true)
   const images = [
     { id: 'Roaming%20Studio/Travel/WadiRum-031024--96_muckv2.jpg', isVertical: true }, 
     { id: 'Roaming%20Studio/Travel/Madeira-041623-32_sssa1e.jpg', isVertical: false }, 
@@ -52,7 +49,18 @@ export default function Travel() {
   return (
     <>
     <NavBar/>
-<PortfolioHeader
+    <Hero/>
+    <div className="py-18 space-y-6 leading-relaxed max-w-3xl mx-auto font-semibold text-sm text-center">
+
+       <p>
+      Travel and photography are our greatest passions. We love arriving in a new place and noticing the small details -- the moments framed between archways, the way the light shifts throughout the day, and the visual character that makes each destination feel one-of-a-kind.
+      </p>
+
+      <p>
+We’d love to collaborate with you to tell a visual story about the place you call home — one that captures its essence and invites others to experience it for themselves.
+</p>
+</div>
+{/* <PortfolioHeader
   word="TRAVEL"
   textBlock={
     <>
@@ -67,7 +75,7 @@ We’d love to collaborate with you to tell a visual story about the place you c
   }
   imageUrl={imageUrl}
   horizontalImg={imageUrl}
-/>
+/> */}
  <div className="px-4 sm:px-6 md:px-12 lg:px-32 xl:px-32 bg-white">
  <TwoColumnGrid images={images}/>
 

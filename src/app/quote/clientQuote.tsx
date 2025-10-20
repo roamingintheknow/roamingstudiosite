@@ -90,16 +90,16 @@ export default function Quotte() {
   word="OUR SERVICES"
   textBlock={
 
-    <div className="w-full bg-wander-white flex justify-center md:pt-18 z-10">
+    <div className="w-full bg-true-white flex justify-center md:pt-18 z-10">
     <div className="pt-16 text-center wander-black-text px-4">
-      <div className="bg-wander-green bg-opacity-50 flex justify-center items-center">
+      <div className="bg-true-white bg-opacity-50 flex justify-center items-center">
         <div className="bg-white rounded-md p-6 shadow-md w-full min-w-[35vw] max-w-[90vw]">            
             {sent ? (
-              <p className="roaming-green-text font-semibold wander-brown-text">Thanks for your message!</p>
+              <p className="roaming-green-text font-semibold bc-green-text">Thanks for your message!</p>
             ) : (
               
-              <form onSubmit={handleSubmit} className="space-y-2 wander-black-text">
-                <h2 className="text-xl font-bold mb-4 wander-brown-text">Request a quote</h2>
+              <form onSubmit={handleSubmit} className="space-y-2 bc-green-text">
+                <h2 className="text-xl font-bold mb-4 bc-green-text">Request a quote</h2>
               <input
                 type="text"
                 name="name"
@@ -161,7 +161,7 @@ export default function Quotte() {
               <button
                 type="submit"
                 disabled={sending}
-                className="cursor-pointer w-full bg-wander-brown text-black rounded-md py-2 font-semibold hover:bg-wander-white"
+                className="cursor-pointer w-full bg-bc-green true-white-text rounded-md py-2 font-semibold hover:bg-wander-white"
               >
                 {sending ? "Sending..." : "Send"}
               </button>

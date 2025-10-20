@@ -1,14 +1,48 @@
 .bg-wander-white{
-  background-color: #f2f0ea;
+  /* background-color: #f2f0ea; */
+background-color: #f0ebe1;
+
+}
+.true-white-text{
+  color: #FFFFFF;
+}
+.bg-true-white{
+  background-color: #FFFFFF;
 }
 .bg-wander-brown{
-  background-color: #e1ccbe;
+
+  /* original wander color */
+  /* background-color: #e1ccbe; */
+  
+  /* More intense wander */
+  /* background-color: #d9b8a7; */
+
+  /* More of a nice tan */
+  /* background-color: #dfd3c3; */
+
+  /* Muted green */
+  /* background-color: #cfc9b5;   */
+
+  /* background-color: #f1e1d0;  */
+   /* background-color: #ab7f5c;  */
+
+   /* Alia Tan */
+   background-color: #d4bea6;
+
+}
+.bg-dark-brown{
+  background-color: #ab7f5c;
 }
 .wander-brown-text{
-  color: #e1ccbe;
+  /* color: #e1ccbe!important; */
+  color: #ab7f5c!important;
+  
 }
 .wander-black-text{
-  color: #585755;
+  color: #585755!important;
+}
+.wander-white-text{
+color: #f2f0ea;
 }
 
 .bg-wander-grey{
@@ -16,8 +50,66 @@
 }
 
 .bg-bc-green{
-  background-color: #80947e;
+  /* background-color: #80947e; */
+  background-color: #556a51;
+  /* background-color: #7e8a6c; */
+  /* background-color: #223120; */
+}
+.bg-warning{
+  background-color: #e05046;
 }
 .bc-green-text{
-  color: #80947e;
+  /* color: #80947e;  */
+  color: #556a51;
+  /* color: #7e8a6c; */
+  /* color: #223120; */
+}
+.red {
+  background-color: #e05046;
+}
+.nice-green{
+  background-color:#ACD39D;
+}
+.off-white{
+  background-color:#FAF9F6;
+}
+.sunset-yellow{
+  background-color: #FDB34F;
+}
+.sunset-orange{
+  background-color: #E97406;
+}
+.grey{
+  background-color: #b1b6bd;
+}
+.white{
+  background-color: #FFFFFF;
+}
+.roaming-brown{
+  background-color: #B78B5A;
+  /* background-color: #B97F51; */
+}
+.roaming-yellow{
+  background-color: #E2B54B;
+}
+
+.roaming-white{
+  background-color: #E7E2CD;
+}
+
+.roaming-blue{
+  background-color: #BED3C7;
+}
+
+.roaming-green{
+  background-color: #91A98F;
+}
+.roaming-green:hover{
+  background-color: #91A98F;
+}
+.nice-white{
+  background-color: #ebeae6;
+}
+.charcoal{
+  color: #595456!important;
 }

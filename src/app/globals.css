@@ -1,37 +1,30 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap'); */
 @import "tailwindcss";
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 :root {
-  /* --font-header: 'Poppins', sans-serif;
-  --font-body: 'Lora', serif; */
-  /* --font-header: 'Avenir', 'Segoe UI', 'Helvetica Neue', sans-serif;
-  --font-body: 'Avenir', 'Georgia', serif; */
-  /* --default-font-family: 'Open Sans', 'Segoe UI', sans-serif;
-  --font-header: 'Oswald', sans-serif;
-  --font-body: 'Open Sans', 'Trebuchet MS', 'Helvetica Neue', sans-serif; */
-  --font-header: 'Playfair','Poppins','Oswald', sans-serif;
-  --font-body: 'Open Sans', 'Trebuchet MS', 'Helvetica Neue', sans-serif;
+--font-header: 'Source Serif Variable','Merriweather', 'Avenir', 'Playfair Display', 'Poppins', 'Oswald', serif;
+  --font-body: 'Source Serif Variable','Avenir','Open Sans', 'Trebuchet MS', 'Helvetica Neue', sans-serif;
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
 }
 
-
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Source Serif Variable';
+}
+a, p, span, li, div {
+  font-family: 'Source Serif Variable'; /* or your default Tailwind font, e.g., font-sans */
+}
 
 html, body {
   margin: 0;
+  font-family: 'Source Serif Variable';
   padding: 0;
   box-sizing: border-box;
-  @apply m-0 p-0;
   font-family: var(--font-body);
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgb(var(--background-end-rgb))
-  ) rgb(var(--background-start-rgb));
+  /* background-color: #d4bea6; */
 }
 
 h1, h2, h3 {
@@ -58,9 +51,3 @@ p {
   scrollbar-width: none; /* Firefox */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  /* --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono); */
-}

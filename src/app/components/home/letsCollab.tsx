@@ -1,13 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { getCloudinaryUrl } from "../../helpers/cloudinary";
+import { getCloudinaryUrl} from "../../helpers/cloudinary";
 export default function LetsCollab() {
   
   const collabImgUrl = getCloudinaryUrl('v1749761132/background%20images/main/Madeira-041623-32_sjreck.jpg', false)
   return (
-<div className="flex-container">
+<div className="flex-container bg-true-white">
 
-<h1 className="wander-brown-text collab-h1 text-center ">
+<h1 className="bc-green-text collab-h1 text-center ">
 
         Let&apos;s Work Together
       </h1>
@@ -32,7 +32,7 @@ export default function LetsCollab() {
 
     <div className="flex justify-center">
       <Link href="/contact">
-        <button className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition pointer-cursor">
+        <button className="bg-bc-green text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition pointer-cursor">
           Contact
         </button>
       </Link>
@@ -49,6 +49,7 @@ export default function LetsCollab() {
                 loading="lazy"
             sizes="(max-width: 940px) 100vw, (max-width: 1024px) 80vw, 50vw "
             className="w-full h-auto max-h-[70vh] object-contain"
+            // loader={cloudinaryLoader}
           />
         </div>
 

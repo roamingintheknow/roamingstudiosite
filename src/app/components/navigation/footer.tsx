@@ -1,7 +1,7 @@
 'use client';
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Image from "next/image";
-import { getCloudinaryUrl8by10 } from "@/app/helpers/cloudinary";
+import { getCloudinaryUrlWithBaseIcon,cloudinaryLoader } from "@/app/helpers/cloudinary";
 
 function SimpleContactForm() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -76,7 +76,7 @@ function SimpleContactForm() {
           <button
             type="submit"
             disabled={sending}
-            className="cursor-pointer w-full bg-bc-green text-black rounded-md py-2 font-semibold hover:bg-wander-white transition"
+            className="cursor-pointer w-full bg-bc-green true-white-text rounded-md py-2 font-semibold hover:bg-true-white transition"
           >
             {sending ? "Sending..." : "Send"}
           </button>
@@ -88,15 +88,60 @@ function SimpleContactForm() {
 
 export default function Footer() {
   const [copied, setCopied] = useState("");
-
+  const [iconImages, setIconImages] = useState<{ full: string; blur: string; href: string; alt: string }[]>([]);
+  const instaIcons = [
+          {
+            href: "https://www.instagram.com/p/DFvUjKSIrDq/?img_index=1",
+            id: "v1750114324/Roaming%20Studio/ig%20posts/Itinerary_vmfzzr.jpg",
+            alt: "Insta post 1",
+          },
+          {
+            href: "https://www.instagram.com/p/DHMGNstIAz2/?img_index=1",
+            id: "v1750114323/Roaming%20Studio/ig%20posts/SriLankaItinerary_ga4bys.jpg",
+            alt: "Insta post 2",
+          },
+          {
+            href: "https://www.instagram.com/p/DFDQm4tJePr/?img_index=1",
+            id: "v1750114321/Roaming%20Studio/ig%20posts/JapanItinerary_i9avfo.jpg",
+            alt: "Insta post 3",
+          },
+          {
+            href: "https://www.instagram.com/p/DG8buOiIBDq/?img_index=1",
+            id: "v1750114320/Roaming%20Studio/ig%20posts/Train_Carousel_qmdmrq.jpg",
+            alt: "Insta post 4",
+          },
+          {
+            href: "https://www.instagram.com/p/DKpL3sCuW0w/?img_index=1",
+            id: "v1750114321/Roaming%20Studio/ig%20posts/cityedition_csuyw6.jpg",
+            alt: "Insta post 5",
+          },
+          {
+            href: "https://www.instagram.com/p/DFQXDUIP86S/?img_index=1",
+            id: "v1750114320/Roaming%20Studio/ig%20posts/Wheretovisit_xhnnd9.jpg",
+            alt: "Insta post 6",
+          },
+        ]
   const handleCopy = (text: string) => {
     navigator.clipboard.writeText(text);
     setCopied(text);
     setTimeout(() => setCopied(""), 1500);
   };
+    useEffect(() => {
+    async function fetchIcons() {
+      const imgs = await Promise.all(
+        instaIcons.map(async ({ id, href, alt }) => {
+          const { full, blur } = await getCloudinaryUrlWithBaseIcon(id, true);
+          return { full, blur, href, alt };
+        })
+      );
+      setIconImages(imgs);
+    }
+    fetchIcons();
+  });
+
 
   return (
-<footer className="bg-wander-grey text-white px-6 sm:px-12 md:px-24 lg:px-32 py-8">
+<footer className="bg-wander-brown text-white px-6 sm:px-12 md:px-24 lg:px-32 py-8">
   <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto mb-12">
 
     {/* Left block spans 3/4 */}
@@ -149,61 +194,28 @@ export default function Footer() {
 
       {/* Instagram 6-grid */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 w-fit mx-auto">
-        {[
-          {
-            href: "https://www.instagram.com/p/DFvUjKSIrDq/?img_index=1",
-            id: "v1750114324/Roaming%20Studio/ig%20posts/Itinerary_vmfzzr.jpg",
-            alt: "Insta post 1",
-          },
-          {
-            href: "https://www.instagram.com/p/DHMGNstIAz2/?img_index=1",
-            id: "v1750114323/Roaming%20Studio/ig%20posts/SriLankaItinerary_ga4bys.jpg",
-            alt: "Insta post 2",
-          },
-          {
-            href: "https://www.instagram.com/p/DFDQm4tJePr/?img_index=1",
-            id: "v1750114321/Roaming%20Studio/ig%20posts/JapanItinerary_i9avfo.jpg",
-            alt: "Insta post 3",
-          },
-          {
-            href: "https://www.instagram.com/p/DG8buOiIBDq/?img_index=1",
-            id: "v1750114320/Roaming%20Studio/ig%20posts/Train_Carousel_qmdmrq.jpg",
-            alt: "Insta post 4",
-          },
-          {
-            href: "https://www.instagram.com/p/DKpL3sCuW0w/?img_index=1",
-            id: "v1750114321/Roaming%20Studio/ig%20posts/cityedition_csuyw6.jpg",
-            alt: "Insta post 5",
-          },
-          {
-            href: "https://www.instagram.com/p/DFQXDUIP86S/?img_index=1",
-            id: "v1750114320/Roaming%20Studio/ig%20posts/Wheretovisit_xhnnd9.jpg",
-            alt: "Insta post 6",
-          },
-        ].map(({ href, id, alt }, i) => {
-          const { full, blur } = getCloudinaryUrl8by10(id, true);
-          return (
-            <a
-              key={i}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block rounded-lg overflow-hidden shadow-md hover:shadow-lg transition"
-            >
-              <Image
-                src={full}
-                alt={alt}
-                width={150}
-                height={200}
-                placeholder="blur"
-                blurDataURL={blur}
-                className="rounded-md"
-                loading="lazy"
-              />
-            </a>
-          );
-        })}
-      </div>
+            {iconImages.map(({ full, blur, href, alt }, i) => (
+              <a
+                key={i}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block rounded-lg overflow-hidden shadow-md hover:shadow-lg transition"
+              >
+                <Image
+                  src={full}
+                  alt={alt}
+                  width={150}
+                  height={200}
+                  placeholder="blur"
+                  blurDataURL={blur}
+                  className="rounded-md"
+                  loading="lazy"
+                  loader={cloudinaryLoader}
+                />
+              </a>
+            ))}
+          </div>
     </div>
 
     {/* Right block (1/4) — Contact Form */}

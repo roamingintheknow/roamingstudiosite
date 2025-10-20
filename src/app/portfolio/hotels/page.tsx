@@ -1,5 +1,6 @@
 import NavBar from "../../components/navigation/navBar";
-import PortfolioHeader from "../../components/portfolio/portfolioHeader";
+// import PortfolioHeader from "../../components/portfolio/portfolioHeader";
+import Hero from "./hero";
 import { getCloudinaryUrl } from "../../helpers/cloudinary";
 import TwoColumnGrid from "../../components/imageLayouts/twoColumnGrid"
 import Footer from "../../components/navigation/footer";
@@ -10,7 +11,6 @@ export const metadata = {
 
 export default function Hotels() {
  
-  const imageUrl = getCloudinaryUrl('v1749585131/Roaming%20Studio/Hotels/DareLisbon-AY-Collaboration-7_vatsyy.jpg', true)
 const images = [
     { id: 'Roaming%20Studio/Hotels/Youssef-011321-18_zaiwet.jpg', isVertical: true }, 
     { id: 'Roaming%20Studio/Hotels/PPVCxAliaYoussef-Oct2024--2_vncjfr.jpg', isVertical: false }, 
@@ -38,7 +38,8 @@ const images = [
   return (
     <>
     <NavBar/>
-<PortfolioHeader
+     <Hero/>
+{/* <PortfolioHeader
   word="HOTELS"
   textBlock={
     <>
@@ -53,7 +54,17 @@ We’re especially drawn to sustainability-conscious, locally owned hotels, and 
   }
   imageUrl={imageUrl}
   horizontalImg={imageUrl}
-/>
+/> */}
+<div className="py-18 space-y-6 leading-relaxed max-w-3xl mx-auto font-semibold text-sm text-center">
+
+     <p>
+We love to blend our warm lifestyle aesthetic with an architectural eye to create photographs that tell the story of your brand.
+</p>
+
+<p>
+We’re especially drawn to sustainability-conscious, locally owned hotels, and love crafting visual stories that highlight the thoughtful details, meaningful design, and sense of place that make your property unique.
+</p>
+</div>
  <div className="px-4 sm:px-6 md:px-12 lg:px-32 xl:px-32 bg-white">
  <TwoColumnGrid images={images}/>
 

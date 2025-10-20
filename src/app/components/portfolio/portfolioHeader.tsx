@@ -1,7 +1,8 @@
 'use client';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
-
+import{ cloudinaryLoader } from '@/app/helpers/cloudinary';
+import { useMobile } from "@/app/helpers/hooks";
 type ImageUrlPair = {
   full: string;
   blur: string;
@@ -28,7 +29,7 @@ export default function PortfolioHeader({
   const ref = useRef<HTMLDivElement>(null);
 
   const [ready, setReady] = useState(false);
-
+  const isMobile = useMobile();
   const resizeText = () => {
     const el = ref.current;
     if (!el) return;
@@ -69,7 +70,7 @@ export default function PortfolioHeader({
 
   return (
     <section
-  className={`relative w-full flex flex-col md:flex-row bg-wander-white ${
+  className={`relative w-full flex flex-col md:flex-row bg-true-white ${
     isReversed ? 'md:flex-row-reverse' : ''
   }`}
     >
@@ -83,7 +84,7 @@ export default function PortfolioHeader({
 </h2> */}
 <h2
   ref={ref}
-  className={`absolute top-6 left-1/2 transform -translate-x-1/2 text-center z-20 portfolio-header-text-lg hidden md:inline-block wander-brown-text transition-opacity duration-300 ${
+  className={`absolute top-6 left-1/2 transform -translate-x-1/2 text-center z-20 portfolio-header-text-lg hidden md:inline-block bc-green-text transition-opacity duration-300 ${
     ready ? 'opacity-100' : 'opacity-0'
   }`}
   style={{ minHeight: '80px' }} // adjust based on expected height range
@@ -98,12 +99,12 @@ export default function PortfolioHeader({
     src={horizontalImg.full}
     blurDataURL={horizontalImg.blur}
     alt={imageAlt}
-    layout="intrinsic"
     width={1200}
     height={800}
     className="w-full h-auto"
-       placeholder="blur"
-                loading="lazy"
+    placeholder="blur"
+    loading="lazy"
+    loader={cloudinaryLoader}
     
   />
 </div>
@@ -126,12 +127,12 @@ export default function PortfolioHeader({
           src={imageUrl.full}
           blurDataURL={imageUrl.blur}
           alt={imageAlt}
-          layout="responsive"
-          width={1200}
-          height={1800}
+          width={isMobile? 600:1200}
+          height={isMobile?900:1800}
           className="object-cover"
             placeholder="blur"
                 loading="lazy"
+                loader={cloudinaryLoader}
         />
       </div>
     </section>

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import {cloudinaryLoader} from '@/app/helpers/cloudinary';
 type ImageUrlPair = {
   full: string;
   blur: string;
@@ -38,6 +39,7 @@ export default function HomeHeader({
           sizes="100vw"
           placeholder="blur" 
           loading="lazy"
+          loader={cloudinaryLoader}
         />
       </div>
 
@@ -49,7 +51,7 @@ export default function HomeHeader({
 
       <div className="hidden md:block w-1/2" />
 
-      <div className="w-full md:w-1/2 bg-black/70 text-white flex items-center justify-center px-6 md:px-12 py-12 z-10 bg-wander-white py-20">
+      <div className="w-full md:w-1/2 bg-black/70 text-white flex items-center justify-center px-6 md:px-12 py-12 z-10 bg-true-white py-20">
   <div className="max-w-xl text-center space-y-6 wander-black-text px-8 md:px-20 lg:px-28 about-p">
     {textBlock}
   </div>

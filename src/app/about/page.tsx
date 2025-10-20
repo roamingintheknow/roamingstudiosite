@@ -2,7 +2,7 @@ import NavBar from "../components/navigation/navBar";
 import PortfolioHeader from "../components/portfolio/portfolioHeader";
 import Footer from "../components/navigation/footer";
 import Image from 'next/image';
-import { getCloudinaryUrl } from "../helpers/cloudinary";
+import { getCloudinaryUrl,cloudinaryLoader } from "../helpers/cloudinary";
 
 export const metadata = {
   title: "About | Roaming Studio",
@@ -85,6 +85,7 @@ export default function About() {
     className="w-full h-auto object-cover"
      placeholder="blur" 
   loading="lazy"
+  loader={cloudinaryLoader}
   />
 </div>
 
@@ -128,6 +129,7 @@ export default function About() {
               height={900}
               placeholder="blur"
                 loading="lazy"
+                loader={cloudinaryLoader}
               className="w-full h-auto object-contain"
             />
           </div>

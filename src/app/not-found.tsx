@@ -16,6 +16,7 @@ export default function NotFound() {
           width={800}
           height={600}
           className="mb-8"
+    
         />
         <h1 className="text-4xl font-bold wander-brown-text mb-4">Oops, this page doesn&apos;t exist.</h1>
         <p className="text-lg wander-black-text mb-6 max-w-xl">
@@ -42,7 +43,7 @@ export default function NotFound() {
   </Link>
   <Link
     href="/services"
-    className="bg-bc-green text-white px-6 py-3 rounded-md hover:bg-black transition text-center"
+    className="bg-bc-green text-white px-3 py-3 rounded-md hover:bg-black transition text-center"
   >
     Services
   </Link>
