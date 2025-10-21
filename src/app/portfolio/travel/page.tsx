@@ -2,6 +2,7 @@ import NavBar from "../../components/navigation/navBar";
 import TwoColumnGrid from "../../components/imageLayouts/twoColumnGrid";
 import Footer from "../../components/navigation/footer";
 import Hero from './hero';
+
 export const metadata = {
   title: "Portfolio | Roaming Studio",
   description: "A collection of photography work Roaming Studio has done for travel brands in the past.",
@@ -50,7 +51,7 @@ export default function Travel() {
     <>
     <NavBar/>
     <Hero/>
-    <div className="py-18 space-y-6 leading-relaxed max-w-3xl mx-auto font-semibold text-sm text-center">
+    <div className="py-18 px-18 md:px-0 space-y-6 leading-relaxed max-w-3xl mx-auto font-semibold text-sm text-center">
 
        <p>
       Travel and photography are our greatest passions. We love arriving in a new place and noticing the small details -- the moments framed between archways, the way the light shifts throughout the day, and the visual character that makes each destination feel one-of-a-kind.

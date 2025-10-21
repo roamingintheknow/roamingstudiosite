@@ -77,9 +77,9 @@ export default function Contact() {
             textBlock={
               <>
 
-<div className="w-full flex justify-center items-center responsive-top-padding bg-wander-white">
+<div className="w-full flex justify-center items-center responsive-top-padding bg-true-white">
   <div className="text-center wander-black-text px-4 pt-[1vw] min-w-[35vw] max-w-[90vw]">
-    <div className="bg-white rounded-xl p-6 w-full shadow-md">
+    <div className="bg-white rounded-xl p-6 w-full ">
         
         <h2 className="text-xl font-bold mb-4 bc-green-text">Send Us A Message</h2>
         {sent ? (
@@ -123,7 +123,7 @@ export default function Contact() {
           {text}
         </p>
         {copied === text && (
-          <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-bc-green wander-black-text text-xs px-2 py-1 rounded shadow z-10">
+          <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-bc-green wander-black-text text-xs px-2 py-1 z-10">
             Copied!
           </div>
         )}

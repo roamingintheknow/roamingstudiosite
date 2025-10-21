@@ -67,7 +67,11 @@ export default async function Home() {
       horizontalImg={horizontalImgUrl}
       isReversed={true}
     /> */}
-<div className="py-18 space-y-6 leading-relaxed max-w-3xl mx-auto font-semibold text-sm text-center">
+<div className="py-18 px-6 md:px-0 space-y-6 leading-relaxed max-w-3xl mx-auto font-semibold text-sm text-center">
+<p className="block md:hidden">
+  Roaming Studio specializes in story-driven content for tourism, hospitality, and destination brands in BC and beyond.
+</p>
+
     <p>
 After a decade of photographing for global brands and publications, and three years traveling across 50+ countries, we’ve combined our greatest passions: travel and photography.
 </p>
@@ -75,7 +79,7 @@ After a decade of photographing for global brands and publications, and three ye
 Rooted in documentary and editorial storytelling, we create natural atmospheric visuals that bring destinations to life. Our campaigns for tourism boards, boutique hotels, and adventure brands across 15+ countries share travel in a way that feels authentic, inspiring, and real.
 </p>
 </div>
-   <div className="px-4 sm:px-6 md:px-12 lg:px-24 xl:px-32 bg-true-white">
+   <div className="px-4 sm:px-12 md:px-12 lg:px-24 xl:px-32 bg-true-white">
       <PhotoGrid
      images={gridImagePaths}/>
      </div>

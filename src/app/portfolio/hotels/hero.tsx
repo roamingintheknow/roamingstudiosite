@@ -1,13 +1,14 @@
+'use client'
 import Image from "next/image";
 import Head from "next/head";
 import blurData from '@/app/helpers/blurData.json' assert { type: 'json' };
-
+import { useMobile } from "@/app/helpers/hooks";
 // tell TS this is a generic string-keyed object
 const blurDataMap = blurData as Record<string, string>;
 
 export default function Hero() {
-  const imageSize = 1000; // this just sets intrinsic aspect ratio (3:2)
-
+  const imageSize = 500; // this just sets intrinsic aspect ratio (3:2)
+  const isMobile= useMobile();
   return (
     <>
       <Head>
@@ -34,15 +35,15 @@ export default function Hero() {
  
 
       {/* 3:2 hero image container */}
-<div className="relative w-full aspect-[3/1.7] overflow-hidden">
+<div className="relative w-full aspect-[2/3] md:aspect-[3/1.7] overflow-hidden">
   <Image
     src="/images/accomodations/accommodation-hero.jpg"
     alt="Roaming Studio accomodations and hotels portfolio hero"
     priority
   fetchPriority="high"
-    width={imageSize * 3}
-    height={imageSize * 1.7}
-    sizes="95vw"
+    width={isMobile? imageSize*2: imageSize * 3}
+    height={isMobile? imageSize*3: imageSize * 1.7}
+    sizes="85vw, 1600px"
     placeholder="blur"
 blurDataURL={blurDataMap['accommodation-hero.jpg'] ?? blurDataMap['home-hero.jpg']}
     className="object-cover object-[center_70%] w-full h-full"

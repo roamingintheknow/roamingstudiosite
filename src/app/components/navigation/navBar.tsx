@@ -70,19 +70,18 @@ export default function NavBar() {
           </div>
 
           {/* Mobile Menu */}
-          <Disclosure.Panel className="md:hidden px-6 pb-4 space-y-2 font-medium bg-black/70 backdrop-blur-sm text-white">
+          <Disclosure.Panel className="md:hidden px-6 pb-4 space-y-2 font-medium  text-white">
             <MobileLink href="/home" label="HOME" />
-            <MobileLink href="/about" label="ABOUT US" />
             <MobileLink href="/services" label="SERVICES" />
             <MobileGroup
               label="PORTFOLIO"
               items={[
                 { href: '/portfolio/hotels', label: 'Accommodations' },
                 { href: '/portfolio/tours', label: 'Tours & Experiences' },
-                { href: '/portfolio/travel', label: 'Travel' },
+                { href: '/portfolio/travel', label: 'Travel & Lifestyle' },
               ]}
             />
-            <MobileLink href="/contact" label="Contact" isButton />
+            <MobileLink href="/contact" label="CONTACT"  />
           </Disclosure.Panel>
         </>
       )}

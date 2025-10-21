@@ -46,7 +46,7 @@ export default function Hotels() {
   horizontalImg={imageUrl}
 /> */}
  <div className="px-4 sm:px-6 md:px-12 lg:px-32 xl:px-32 bg-white">
-<div className="py-18 space-y-6 leading-relaxed max-w-3xl mx-auto font-semibold text-sm text-center">
+<div className="py-18 px-18 md:px-0 space-y-6 leading-relaxed max-w-3xl mx-auto font-semibold text-sm text-center">
 
   <p>
           We&apos;re adventure travellers who say yes to everything - from hiking in the mountains of Pakistan, riding $5 ziplines in Ecuador, to driving a tuk-tuk 1,000 km across Sri Lanka. We live for new experiences - and love photographing them even more.     
