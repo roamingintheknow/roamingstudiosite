@@ -7,19 +7,20 @@ import { useMobile } from "@/app/helpers/hooks";
 const blurDataMap = blurData as Record<string, string>;
 
 export default function Hero() {
-  const imageSize = 500; // this just sets intrinsic aspect ratio (3:2)
+  const imageSize = 4000; // this just sets intrinsic aspect ratio (3:2)
   const isMobile= useMobile();
   return (
     <>
-      <Head>
-        <link
-          rel="preload"
-          as="image"
-          href="/images/home-hero.jpg"
-          imageSrcSet="/images/home-hero.jpg 1200w, /images/home-hero@2x.jpg 2400w"
-          imageSizes="95vw"
-        />
-      </Head>
+   <Head>
+  <link
+    rel="preload"
+    as="image"
+    href="/images/home-hero.jpg"
+    imageSrcSet="/images/home-hero.jpg 1200w, /images/home-hero@2x.jpg 2400w"
+    imageSizes="95vw"
+  />
+</Head>
+
     <section className="relative w-full bg-black">
       {/* Transparent header */}
         {/* <Image
@@ -37,13 +38,13 @@ export default function Hero() {
       {/* 3:2 hero image container */}
 <div className="relative w-full aspect-[2/3] md:aspect-[3/1.7] overflow-hidden">
   <Image
-    src="/images/accomodations/accommodation-hero.jpg"
+    src={"/images/accomodations/accommodation-hero.jpg"}
     alt="Roaming Studio accomodations and hotels portfolio hero"
     priority
   fetchPriority="high"
     width={isMobile? imageSize*2: imageSize * 3}
     height={isMobile? imageSize*3: imageSize * 1.7}
-    sizes="85vw, 1600px"
+ sizes="85vw, 1200px"
     placeholder="blur"
 blurDataURL={blurDataMap['accommodation-hero.jpg'] ?? blurDataMap['home-hero.jpg']}
     className="object-cover object-[center_70%] w-full h-full"

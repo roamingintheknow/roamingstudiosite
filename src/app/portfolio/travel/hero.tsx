@@ -43,7 +43,7 @@ export default function Hero() {
   fetchPriority="high"
     width={isMobile? imageSize*2:imageSize * 3}
     height={isMobile? imageSize*3:imageSize * 1.7}
-    sizes="85vw, 1600px"
+     sizes="85vw, 1200px"
     placeholder="blur"
 blurDataURL={blurDataMap['travels-hero.jpg'] ?? blurDataMap['home-hero.jpg']}
     className="object-cover object-[center_70%] w-full h-full"
