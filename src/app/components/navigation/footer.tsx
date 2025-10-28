@@ -126,18 +126,32 @@ export default function Footer() {
     setCopied(text);
     setTimeout(() => setCopied(""), 1500);
   };
-    useEffect(() => {
-    async function fetchIcons() {
-      const imgs = await Promise.all(
-        instaIcons.map(async ({ id, href, alt }) => {
-          const { full, blur } = await getCloudinaryUrlWithBaseIcon(id, true);
-          return { full, blur, href, alt };
-        })
-      );
-      setIconImages(imgs);
-    }
-    fetchIcons();
-  });
+  useEffect(() => {
+  async function fetchIcons() {
+    const imgs = await Promise.all(
+      instaIcons.map(async ({ id, href, alt }) => {
+        const { full, blur } = await getCloudinaryUrlWithBaseIcon(id, true);
+        return { full, blur, href, alt };
+      })
+    );
+    setIconImages(imgs);
+  }
+
+  fetchIcons();
+}, []); // ✅ only run once
+
+  //   useEffect(() => {
+  //   async function fetchIcons() {
+  //     const imgs = await Promise.all(
+  //       instaIcons.map(async ({ id, href, alt }) => {
+  //         const { full, blur } = await getCloudinaryUrlWithBaseIcon(id, true);
+  //         return { full, blur, href, alt };
+  //       })
+  //     );
+  //     setIconImages(imgs);
+  //   }
+  //   fetchIcons();
+  // });
 
 
   return (
