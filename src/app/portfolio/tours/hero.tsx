@@ -32,7 +32,7 @@ export default function Hero() {
     alt="Roaming Studio accomodation portfolio hero"
     priority
     fill
-    sizes="(max-width: 768px) 95vw, 1200px"
+    sizes="(max-width: 768px) 90vw, 1200px"
     placeholder="blur"
     blurDataURL={blurDataMap['home-hero.jpg']}
     className="object-cover object-[center_70%]"
