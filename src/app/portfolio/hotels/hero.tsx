@@ -30,7 +30,7 @@ return (
     alt="Roaming Studio accomodation portfolio hero"
     priority
     fill
-    sizes="(max-width: 768px) 95vw, 1600px"
+    sizes="(max-width: 768px) 90vw, 1200px"
     placeholder="blur"
     quality={80}
     blurDataURL={blurDataMap['home-hero.jpg']}
