@@ -18,9 +18,6 @@ export default function Contact() {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
 
-  const BackgroundImgUrl = getCloudinaryUrl('v1749761193/background%20images/contact/Wales-072122-125_gaiuvs.jpg', true)
-  const HorizontalBackgroundImgUrl = getCloudinaryUrl('v1749877956/background%20images/services/Wales-072122-130-horizontal_ztfrmt.jpg', false)
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
