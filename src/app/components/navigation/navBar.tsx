@@ -13,7 +13,7 @@ export default function NavBar() {
       {({ open }: { open: boolean }) => (
         <>
           {/* Header row */}
-          <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<div className="w-full flex justify-between items-center py-4 px-6 md:px-4">
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <div>
