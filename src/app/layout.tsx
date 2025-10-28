@@ -9,7 +9,7 @@ import { Source_Serif_4, Merriweather } from "next/font/google";
 
 const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["300", "600"],
   display: "swap",
   variable: "--font-body",
 });
