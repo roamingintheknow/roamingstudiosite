@@ -23,39 +23,48 @@ type TwoColumnGridProps = {
 export default function TwoColumnGrid({ images }: TwoColumnGridProps) {
   const [leftColumn, setLeftColumn] = useState<FetchedImage[]>([]);
   const [rightColumn, setRightColumn] = useState<FetchedImage[]>([]);
+  const [fetchedImages, setFetchedImages] = useState<FetchedImage[]>([]);
   const isMobile = useMobile();
 
   useEffect(() => {
     async function fetchImages() {
-      const left: FetchedImage[] = [];
-      const right: FetchedImage[] = [];
-
-      let leftHeight = 0;
-      let rightHeight = 0;
+      const fetched: FetchedImage[] = [];
 
       for (const img of images) {
         const { full, blur } = await getCloudinaryUrlWithBaseSmall(img.id, img.isVertical);
-        const fetchedImg = { ...img, full, blur };
-        const estimatedHeight = img.isVertical ? 3 : 2;
-
-        if (leftHeight <= rightHeight) {
-          left.push(fetchedImg);
-          leftHeight += estimatedHeight;
-        } else {
-          right.push(fetchedImg);
-          rightHeight += estimatedHeight;
-        }
+        fetched.push({ ...img, full, blur });
       }
 
-      setLeftColumn(left);
-      setRightColumn(right);
+      setFetchedImages(fetched);
+
+      if (!isMobile) {
+        // only split into columns for desktop
+        const left: FetchedImage[] = [];
+        const right: FetchedImage[] = [];
+        let leftHeight = 0;
+        let rightHeight = 0;
+
+        for (const img of fetched) {
+          const estimatedHeight = img.isVertical ? 3 : 2;
+          if (leftHeight <= rightHeight) {
+            left.push(img);
+            leftHeight += estimatedHeight;
+          } else {
+            right.push(img);
+            rightHeight += estimatedHeight;
+          }
+        }
+
+        setLeftColumn(left);
+        setRightColumn(right);
+      }
     }
 
     fetchImages();
-  }, [images]);
+  }, [images, isMobile]);
 
-  // On mobile, stack everything in a single column
-  const columns = isMobile ? [ [...leftColumn, ...rightColumn] ] : [leftColumn, rightColumn];
+  // On mobile, show a single column preserving original order
+  const columns = isMobile ? [fetchedImages] : [leftColumn, rightColumn];
 
   return (
     <div className={`flex gap-6 px-6 py-6 bg-white max-w-5xl mx-auto ${isMobile ? 'flex-col' : ''}`}>
