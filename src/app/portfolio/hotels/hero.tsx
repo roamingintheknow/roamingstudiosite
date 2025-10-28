@@ -1,6 +1,5 @@
 'use client'
 import Image from "next/image";
-import Head from "next/head";
 import blurData from '@/app/helpers/blurData.json' assert { type: 'json' };
 
 // tell TS this is a generic string-keyed object

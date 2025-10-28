@@ -1,9 +1,7 @@
 'use client';
 import Image from "next/image";
-import Head from "next/head";
 import blurData from '@/app/helpers/blurData.json' assert { type: 'json' };
-import { useMobile } from "@/app/helpers/hooks";
-import {useState, useEffect} from 'react';
+
 // tell TS this is a generic string-keyed object
 const blurDataMap = blurData as Record<string, string>;
 
