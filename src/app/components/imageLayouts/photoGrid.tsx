@@ -24,7 +24,8 @@ export default function PhotoGrid({ images }: PhotoGridProps) {
     className="object-cover w-full h-full shadow-md"
     placeholder="blur"
     loading="lazy"
-    blurDataURL={blurDataMap[imageName || 'home-grid-1.jpg']}
+     blurDataURL={blurDataMap[imageName|| 'home-grid-1.jpg'] ?? blurDataMap['home-grid-1.jpg'] ?? ''}
+ 
     // loader={cloudinaryLoader}
   />
 </div>
