@@ -3,9 +3,9 @@ import Link from 'next/link';
 export default function OfferBlock() {
   return (
     <>
-    <div className="px-4 sm:px-6 md:px-12 lg:px-24 xl:px-32 pb-24 bg-white">
+    <div className="px-4 sm:px-6 md:px-12 lg:px-24 xl:px-32 pb-24 bg-wander-white">
       <h1 className='bc-green-text about-h1'>What We Offer</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 p-2 bg-white">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 p-2 bg-wander-white">
         <div>
           <h2 className='wander-black-text about-h2 pb-6'>Photography</h2>
           <p  className='wander-black-text offer-p '>We specialize in documentary-style photography that tells the unique story of travel, tourism, and hospitality brands. With over a decade of experience, we create warm, emotive imagery that connects deeply with audiences — whether for social media, your website, or an editorial in a publication.</p>

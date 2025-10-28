@@ -27,7 +27,7 @@ export default function Hero() {
       {/* 3:2 hero image container */}
 <div className="relative w-full aspect-[2/3] md:aspect-[3/1.7] overflow-hidden">
  <Image
-     src="/images/travel/travel-hero.jpg"
+     src="/images/services/service-hero.jpg"
      alt="Roaming Studio accomodation portfolio hero"
      priority
      fill
@@ -43,7 +43,7 @@ export default function Hero() {
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 pb-36 text-white z-10">
 
         <h1 className="true-white-text collab-h1 text-center ">
-          Travel
+          Services
         </h1>
       </div>
 

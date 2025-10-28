@@ -6,6 +6,7 @@ import Link from 'next/link';
 import PortfolioHeader from '../components/portfolio/portfolioHeader';
 import { BsInstagram } from "react-icons/bs";
 import { getCloudinaryUrl } from "../helpers/cloudinary";
+import Hero from './hero';
 
 export const metadata = {
   title: "Contact | Roaming Studio",
@@ -71,13 +72,8 @@ export default function Contact() {
   return (
     <>
       <NavBar/>
-
-       <PortfolioHeader
-            word="CONTACT US"
-            textBlock={
-              <>
-
-<div className="w-full flex justify-center items-center responsive-top-padding bg-true-white">
+    <Hero/>
+<div className="pb-4 w-full flex justify-center items-center responsive-top-padding bg-true-white">
   <div className="text-center wander-black-text px-4 pt-[1vw] min-w-[35vw] max-w-[90vw]">
     <div className="bg-white rounded-xl p-6 w-full ">
         
@@ -135,12 +131,6 @@ export default function Contact() {
 
     </div>
   </div>
-              </>
-            }
-            imageUrl={BackgroundImgUrl}
-            horizontalImg={HorizontalBackgroundImgUrl}
-            isReversed={true}
-          />
  <Footer/>
 
 
