@@ -2,7 +2,6 @@ import NavBar from "../../components/navigation/navBar";
 import TwoColumnGrid from "../../components/imageLayouts/twoColumnGrid";
 import Footer from "../../components/navigation/footer";
 import Hero from './hero';
-import { IoSwapVertical } from "react-icons/io5";
 
 export const metadata = {
   title: "Portfolio | Roaming Studio",
