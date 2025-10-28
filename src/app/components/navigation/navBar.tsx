@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Menu,  Disclosure } from '@headlessui/react';
-import { ChevronDown, Menu as MenuIcon, X } from 'lucide-react';
+import {  Menu as MenuIcon, X } from 'lucide-react';
 import { Fragment } from 'react';
 // import { cloudinaryLoader } from '@/app/helpers/cloudinary';
 
@@ -179,13 +179,13 @@ function MobileGroup({
 }) {
   return (
     <Disclosure>
-      {({ open }) => (
+      {() => (
         <div>
           <Disclosure.Button className="flex justify-between w-full px-2 py-1  items-center">
             <span>{label}</span>
-            <ChevronDown
+            {/* <ChevronDown
               className={`${open ? 'rotate-180' : ''} h-4 w-4 transition-transform`}
-            />
+            /> */}
           </Disclosure.Button>
           <Disclosure.Panel className="ml-4 space-y-1">
             {items.map((item, i) => (

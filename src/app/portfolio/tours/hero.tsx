@@ -1,12 +1,12 @@
 'use client';
 import Image from "next/image";
 import blurData from '@/app/helpers/blurData.json' assert { type: 'json' };
-
+import { useMobile } from '@/app/helpers/hooks';
 // tell TS this is a generic string-keyed object
 const blurDataMap = blurData as Record<string, string>;
 
 export default function Hero() {
-
+  const isMobile=useMobile()
   return (
     <>
     
@@ -28,7 +28,11 @@ export default function Hero() {
 <div className="relative w-full aspect-[2/3] md:aspect-[3/1.7] overflow-hidden">
 
  <Image
-    src="/images/tours/tour-hero.jpg"
+    src={
+      isMobile
+        ? "/images/tours/tour-hero-vertical.jpg"
+        : "/images/tours/tour-hero.jpg"
+    }
     alt="Roaming Studio accomodation portfolio hero"
     priority
     fill
