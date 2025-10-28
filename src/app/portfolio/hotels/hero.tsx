@@ -32,6 +32,7 @@ return (
     fill
     sizes="(max-width: 768px) 95vw, 1600px"
     placeholder="blur"
+    quality={80}
     blurDataURL={blurDataMap['home-hero.jpg']}
     className="object-cover object-[center_70%]"
   />
