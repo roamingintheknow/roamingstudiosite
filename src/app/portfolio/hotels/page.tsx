@@ -1,20 +1,12 @@
-'use client'
 import NavBar from "../../components/navigation/navBar";
 // import PortfolioHeader from "../../components/portfolio/portfolioHeader";
 import Hero from "./hero";
 import TwoColumnGrid from "../../components/imageLayouts/twoColumnGrid"
-import PhotoGrid from "../../components/imageLayouts/photoGrid";
 import Footer from "../../components/navigation/footer";
-import { useMobile } from "@/app/helpers/hooks";
-import {useState, useEffect} from 'react';
-import { getCloudinaryUrlWithBaseSmall} from '@/app/helpers/cloudinary';
-// export const metadata = {
-//   title: "Portfolio | Roaming Studio",
-//   description: "A collection of photography work Roaming Studio has done for hotels in the past.",
-// };
+
 
 export default function Hotels() {
- const isMobile= useMobile()
+
 const images = [
 
 {id:'Roaming%20Studio/Hotels/new%20additions%202025/Tofino2025-20_twvnja.jpg', isVertical:true},
@@ -49,25 +41,7 @@ const images = [
     
   ];
 
-const [gridImages, setGridImages] = useState<string[]>([]);
 
-useEffect(() => {
-  let mounted = true;
-
-  const fetchImages = async () => {
-    const urls = await Promise.all(
-      images.map(async (img) => {
-        const { full } = await getCloudinaryUrlWithBaseSmall(img.id, img.isVertical);
-        return full; // just the string URL
-      })
-    );
-
-    if (mounted) setGridImages(urls);
-  };
-
-  fetchImages();
-  return () => { mounted = false; };
-}, []);
   return (
     <>
     <NavBar/>
@@ -100,13 +74,7 @@ We’re especially drawn to sustainability-conscious, locally owned hotels, and 
 </div>
  <div className="px-4 sm:px-6 md:px-12 lg:px-32 xl:px-32 bg-white">
 
-{isMobile ? (
-  <PhotoGrid images={gridImages} />
-) : (
   <TwoColumnGrid images={images} />
-)}
-
-
 
  </div>
  <Footer/>
