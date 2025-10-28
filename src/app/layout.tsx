@@ -1,4 +1,3 @@
-import { Poppins } from 'next/font/google';
 import Head from 'next/head';
 import "./globals.css";
 import "./styles/colors.css";
@@ -6,13 +5,22 @@ import "./styles/text.css";
 import "./styles/effects.css";
 import "./styles/containers.css";
 import GoogleAnalytics from './components/GoogleAnalytics';
+import { Source_Serif_4, Merriweather } from "next/font/google";
 
-const poppins = Poppins({
-  variable: '--font-poppins',
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['300', '400', '600', '700'],
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-body",
 });
+
+const merriweather = Merriweather({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-header",
+});
+
 
 export const metadata = {
   title: 'Roaming Studio | Travel Focused BC-Based Media Company Offering Photography, UG Video, & Drone Travel Content',
@@ -68,14 +76,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+           <html lang="en" className={`${sourceSerif.variable} ${merriweather.variable}`}>
+
      <Head>
     
       <link rel="icon" href="/favicon.ico" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     </Head>
-    <body className={`${poppins.variable} antialiased`}>
+      <body className="font-[var(--font-body)]">
       {children}
       <GoogleAnalytics GA_MEASUREMENT_ID={process.env.GA_MEASUREMENT_ID!} />
     </body>
