@@ -3,13 +3,20 @@ import Image from "next/image";
 import Head from "next/head";
 import blurData from '@/app/helpers/blurData.json' assert { type: 'json' };
 import { useMobile } from "@/app/helpers/hooks";
-
+import {useState, useEffect} from 'react';
 // tell TS this is a generic string-keyed object
 const blurDataMap = blurData as Record<string, string>;
 
 export default function Hero() {
-  const imageSize = 4000; // this just sets intrinsic aspect ratio (3:2)
   const isMobile = useMobile()
+const [pixelDensity, setPixelDensity] = useState(1)
+
+  useEffect(() => {
+    setPixelDensity(window.devicePixelRatio > 1 ? 2 : 1)
+  }, [])
+const width = (isMobile ? 800 : 1600) * pixelDensity;
+const height = (isMobile ? 1200 : Math.round(1600 / (3 / 1.7))) * pixelDensity;
+
   return (
     <>
       <Head>
@@ -42,9 +49,11 @@ href={isMobile ? "/images/home-hero-mobile.jpg" : "/images/home-hero.jpg"}
     alt="Roaming Studio portfolio hero"
     priority
     fetchPriority="high"
-    width={isMobile ? imageSize * 2 : 3}
-    height={isMobile ? imageSize * 3: 1.7}
-    sizes="95vw, 1600px"
+    quality={90}
+ width={width}
+            height={height}
+            sizes="(max-width: 768px) 95vw, 1600px"
+
     placeholder="blur"
     blurDataURL={blurDataMap['home-hero.jpg']}
     className="object-cover object-[center_70%] w-full h-full"
