@@ -50,8 +50,8 @@ export async function getCloudinaryUrlWithBaseSmall(
 ) {
   // Width first, then the rest of the transforms
 const fullTransform = isVertical
-    ? 'c_fill,g_auto,w_550,h_825,q_auto:eco,f_auto,fl_progressive,dpr_auto' // 2:3
-    : 'c_fill,g_auto,w_850,h_567,q_auto:eco,f_auto,fl_progressive,dpr_auto'; // 3:2
+  ? 'c_fill,g_auto,w_1200,h_1800,q_auto:eco,f_auto,fl_progressive,dpr_auto' // 2:3 scaled up
+  : 'c_fill,g_auto,w_1700,h_1133,q_auto:eco,f_auto,fl_progressive,dpr_auto'; // 3:2 scaled up
 
   const blurTransform = isVertical
     ? 'c_fill,g_auto,w_20,h_30,q_5,f_auto'

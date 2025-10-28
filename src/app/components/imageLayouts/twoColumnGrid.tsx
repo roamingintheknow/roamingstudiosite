@@ -58,26 +58,26 @@ export default function TwoColumnGrid({ images }: TwoColumnGridProps) {
       {[leftColumn, rightColumn].map((column, i) => (
         <div key={i} className="flex flex-col gap-6 w-1/2">
           {column.map((img, j) => (
-            <Image
-              key={img.id}
-              src={img.full}
-              blurDataURL={img.blur}
-              alt={`Image ${j}`}
-              width={isMobile ? 350 : 750}
-               height={isMobile 
-    ? Math.round((img.isVertical ? 8 : 10) / (img.isVertical ? 10 : 8) * 350) 
-    : Math.round((img.isVertical ? 8 : 10) / (img.isVertical ? 10 : 8) * 750)
+<Image
+  key={img.id}
+  src={img.full}
+  blurDataURL={img.blur}
+  alt={`Image ${j}`}
+  width={isMobile ? 1200 : 2400} 
+  height={isMobile 
+    ? Math.round((img.isVertical ? 8 : 10) / (img.isVertical ? 10 : 8) * 1200) 
+    : Math.round((img.isVertical ? 8 : 10) / (img.isVertical ? 10 : 8) * 2400)
   }
-              className="object-cover w-full h-auto"
-           sizes="(max-width: 480px) 40vw, 
-           (max-width: 756px) 50vw, 
-         (max-width: 1024px) 50vw, 
-         (max-width: 1536px) 33vw, 
-         25vw"
-              placeholder="blur"
-              loading="lazy"
-              loader={cloudinaryLoader}
-            />
+  className="object-cover w-full h-auto"
+  sizes="(max-width: 480px) 70vw, (max-width: 756px) 80vw, (max-width: 1024px) 90vw, (max-width: 1536px) 70vw, 75vw"
+  placeholder="blur"
+  loading="lazy"
+  quality={100}
+  loader={cloudinaryLoader}
+/>
+
+
+
           ))}
         </div>
       ))}

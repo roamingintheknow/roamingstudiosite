@@ -59,7 +59,7 @@ export default function About() {
 
     </div>
     <div className="flex flex-col items-center justify-center gap-12 max-w-5xl px-6 mx-auto py-12">
-  <p className="wander-black-text font-bold leading-relaxed text-center">
+  <p className="wander-black-text font-bold text-lg leading-relaxed text-center">
     Some brands we have worked with:
   </p>
 </div>

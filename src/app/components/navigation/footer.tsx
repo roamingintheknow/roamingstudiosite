@@ -191,7 +191,6 @@ export default function Footer() {
           <h3 className="text-lg font-semibold mb-4">Navigate</h3>
           <ul className="space-y-2">
             <li><a href="/home" className="hover:text-white">Home</a></li>
-            <li><a href="/about" className="hover:text-white">About</a></li>
             <li><a href="https://www.roamingintheknow.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">Blog</a></li>
             <li><a href="/contact" className="hover:text-white">Contact</a></li>
           </ul>
