@@ -13,7 +13,7 @@ export default function NavBar() {
       {({ open }: { open: boolean }) => (
         <>
           {/* Header row */}
-          <div className="max-w-7xl mx-auto px-12 py-4 flex justify-between items-center">
+          <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <div>
@@ -21,9 +21,9 @@ export default function NavBar() {
                           src="/images/home-logo.png"
                           alt="Roaming Studio portfolio hero"
                           priority
-                          width={imageSize * 1/20}
-                          height={imageSize * 1/20}
-                          sizes="10vw"
+                          width={imageSize * 1/14}
+                          height={imageSize * 1/14}
+                          sizes="12vw"
                           className="object-cover object-center "
                         />
               </div>
@@ -41,7 +41,7 @@ export default function NavBar() {
             </Link>
 
             {/* Desktop Nav */}
-            <div className="hidden md:flex gap-2 items-center font-bold px-8 focus:border-none focus:outline-none focus:ring-0 focus-visible:ring-0">
+            <div className="hidden md:flex gap-4 items-center font-bold px-6 focus:border-none focus:outline-none focus:ring-0 focus-visible:ring-0">
               <Dropdown
                 label="PORTFOLIOS"
                 items={[
@@ -118,12 +118,12 @@ function Dropdown({
         }}
       >
         {label}
-        <ChevronDown size={16} className="ml-1" />
+        {/* <ChevronDown size={16} className="ml-1" /> */}
       </Menu.Button>
 
      
         <Menu.Items
-          className="absolute left-0 mt-2 w-48 origin-top-left  text-white  overflow-hidden border:none focus:outline-none z-50"
+          className="absolute left-0 mt-2 w-48 origin-top-left  text-white  overflow-hidden border:none focus:outline-none  z-50"
         >
           <div>
             {items.map((item, i) => (
