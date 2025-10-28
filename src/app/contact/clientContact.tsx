@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import Footer from "../components/navigation/footer";
 import NavBar from "../components/navigation/navBar";
 import Link from 'next/link';
-import PortfolioHeader from '../components/portfolio/portfolioHeader';
 import { BsInstagram } from "react-icons/bs";
 import { getCloudinaryUrl } from "../helpers/cloudinary";
 import Hero from './hero';

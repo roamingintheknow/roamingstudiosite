@@ -1,8 +1,6 @@
 import NavBar from "../components/navigation/navBar";
-import PortfolioHeader from "../components/portfolio/portfolioHeader";
 import OfferBlock from "../components/about/offerBlock";
 import Footer from "../components/navigation/footer";
-import { getCloudinaryUrl } from "../helpers/cloudinary";
 import Hero from "./hero";
 export const metadata = {
   title: "Services | Roaming Studio",
