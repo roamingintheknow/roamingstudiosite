@@ -46,7 +46,7 @@ export default function Hero() {
 
   {/* Centered bottom hero text (desktop only) */}
   <div className="hidden md:absolute md:inset-0 md:flex md:flex-col md:items-center md:justify-center md:text-center md:px-4 md:pb-36 text-white z-10">
-    <p className="mt-4 max-w-2xl text-lg md:text-xl italic text-white/90 font-bold">
+    <p className="mt-4 max-w-3xl roaming-text-size-6 italic text-white/90 font-bold">
       Roaming Studio specializes in story-driven content for tourism, hospitality, and destination brands in BC and beyond.
     </p>
   </div>

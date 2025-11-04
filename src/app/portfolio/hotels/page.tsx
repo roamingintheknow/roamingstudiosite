@@ -62,7 +62,7 @@ We’re especially drawn to sustainability-conscious, locally owned hotels, and 
   imageUrl={imageUrl}
   horizontalImg={imageUrl}
 /> */}
-<div className="py-18 px-18 md:px-0 space-y-6 leading-relaxed max-w-3xl mx-auto font-semibold text-sm text-center">
+<div className="py-18 px-18 md:px-0 space-y-6 leading-relaxed max-w-3xl mx-auto font-semibold roaming-text-size-3 bc-green-text  text-center">
 
      <p>
 We love to blend our warm lifestyle aesthetic with an architectural eye to create photographs that tell the story of your brand.

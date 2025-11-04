@@ -67,8 +67,8 @@ export default async function Home() {
       horizontalImg={horizontalImgUrl}
       isReversed={true}
     /> */}
-<div className="py-18 px-6 md:px-0 space-y-6 leading-relaxed max-w-3xl mx-auto font-semibold text-sm text-center">
-<p className="block md:hidden">
+<div className="py-18 px-6 md:px-0 space-y-6 leading-relaxed max-w-3xl mx-auto font-semibold text-center roaming-text-size-3 bc-green-text ">
+<p className="block md:hidden ">
   Roaming Studio specializes in story-driven content for tourism, hospitality, and destination brands in BC and beyond.
 </p>
 

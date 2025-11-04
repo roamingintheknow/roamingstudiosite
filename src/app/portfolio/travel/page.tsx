@@ -51,7 +51,7 @@ export default function Travel() {
     <>
     <NavBar/>
     <Hero/>
-    <div className="py-18 px-18 md:px-0 space-y-6 leading-relaxed max-w-3xl mx-auto font-semibold text-sm text-center">
+    <div className="py-18 px-18 md:px-0 space-y-6 leading-relaxed max-w-3xl mx-auto font-semibold roaming-text-size-3 bc-green-text  text-center">
 
        <p>
       Travel and photography are our greatest passions. We love arriving in a new place and noticing the small details -- the moments framed between archways, the way the light shifts throughout the day, and the visual character that makes each destination feel one-of-a-kind.

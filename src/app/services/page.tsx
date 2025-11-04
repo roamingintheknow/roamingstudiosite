@@ -14,7 +14,7 @@ export default function Services() {
     <NavBar/>
     <Hero/>
 
-          <div className="max-w-2xl mx-auto px-6 py-12 space-y-6 font-semibold text-center">
+          <div className="max-w-2xl mx-auto px-6 py-12 space-y-6 font-semibold roaming-text-size-3 bc-green-text  text-center">
         <p>
           Roaming Studio is a BC-Based media company that works with tourism, hospitality, and destination brands. We offer photography, UGC video, and drone content to give your story the visuals it deserves.
         </p>
